@@ -1,10 +1,9 @@
-import Header from "./components/Header";
-
 const BoneEClaudio = () => {
-
     return (  
         <>
-        <Header />
+        <div>
+            
+        </div>
         </>
     );
 }
