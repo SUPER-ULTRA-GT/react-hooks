@@ -1,9 +1,9 @@
-import Path from "./routes/Path"
+import { NavLink } from "react-router-dom"
 
 function App() {
 
   return (
-    <Path />
+
   )
 }
 
