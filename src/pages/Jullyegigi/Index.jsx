@@ -6,4 +6,4 @@ const Jullyegigi = () => {
   );
 }
  
-export default Jullyegigi;
+export default Jullyegigi;°
