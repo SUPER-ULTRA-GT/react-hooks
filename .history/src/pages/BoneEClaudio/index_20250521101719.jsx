@@ -1,10 +1,6 @@
 const BoneEClaudio = () => {
     return (  
-        <>
-        <div className="">
-
-        </div>
-        </>
+        <></>
     );
 }
  

@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BoneEClaudio from "../../pages/BoneEClaudio";
 
 const Path = () => {
     return (
@@ -8,7 +7,7 @@ const Path = () => {
             <div>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/bone-e-claudio" element={<BoneEClaudio />} />
+                        <Route path="/bone-e-claudio" element={} />
                     </Routes>
                 </BrowserRouter>
             </div>

@@ -1,7 +1,7 @@
 const BoneEClaudio = () => {
     return (  
         <>
-        <div className="">
+        <div className="fon">
 
         </div>
         </>

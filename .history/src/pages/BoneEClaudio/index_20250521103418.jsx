@@ -3,7 +3,7 @@ const BoneEClaudio = () => {
         <>
         <div className="">
 
-        </div>
+    </div>
         </>
     );
 }
