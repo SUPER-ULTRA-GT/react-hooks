@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BoneEClaudio from "../../pages/BoneEClaudio"
+import VendelEClive from "../../pages/VendelEClive";
 
 const Path = () => {
     return (
@@ -7,7 +9,8 @@ const Path = () => {
             <div>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="" element={ } />
+                        <Route path="/" element={ <BoneEClaudio />} />
+                        <Route path="/vendel-e-clive" element={ <VendelEClive />} />
                     </Routes>
                 </BrowserRouter>
             </div>
