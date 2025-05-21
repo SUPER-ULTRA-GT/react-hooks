@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import JuliaEIgor from "../../pages/juliaEIgor";
 
 const Path = () => {
     return (
@@ -7,7 +8,7 @@ const Path = () => {
             <div>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="" element={ } />
+                        <Route path="/julia-e-igor" element={<JuliaEIgor />} />
                     </Routes>
                 </BrowserRouter>
             </div>
