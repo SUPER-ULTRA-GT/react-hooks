@@ -1,5 +1,5 @@
 const BoneEClaudio = () => {
-    return (  );
+    return;
 }
  
 export default BoneEClaudio;
