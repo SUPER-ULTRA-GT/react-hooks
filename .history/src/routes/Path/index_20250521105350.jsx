@@ -9,7 +9,7 @@ const Path = () => {
                 <BrowserRouter>
                     <Routes>
                         <Route path="/bone-e-claudio" element={<BoneEClaudio />} />
-                        <Route path="/bone-e-claudio" element={<BoneEClaudio />} />
+                        <Route path="/o" element={<BoneEClaudio />} />
                     </Routes>
                 </BrowserRouter>
             </div>
