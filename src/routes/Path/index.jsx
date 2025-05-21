@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RenatoEMikhail from "../../pages/RenatoEMikhail";
 
 const Path = () => {
     return (
@@ -7,7 +8,7 @@ const Path = () => {
             <div>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="" element={ } />
+                        <Route path="/renato-mikhail" element={<RenatoEMikhail />} />
                     </Routes>
                 </BrowserRouter>
             </div>
