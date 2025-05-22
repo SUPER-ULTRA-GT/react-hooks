@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import JuliaEIgor from "../../pages/juliaEIgor";
+import JuliaEIgor from "../../pages/JuliaEIgor";
 
 const Path = () => {
     return (
-        <>
-            <h1>CARRINHO DE COMPRAS SUPER GT</h1>
+        <div>
+            <h1 className="text-center mt-4">CARRINHO DE COMPRAS SUPER GT</h1>
             <div>
                 <BrowserRouter>
                     <Routes>
@@ -12,7 +12,7 @@ const Path = () => {
                     </Routes>
                 </BrowserRouter>
             </div>
-        </>
+        </div>
     );
 }
 
