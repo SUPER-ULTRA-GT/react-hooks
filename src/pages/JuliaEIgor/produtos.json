@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "nome": "Pão",
+      "preco": 1,
+      "quantidade": 0
+    },
+    {
+      "id": 2,
+      "nome": "Café",
+      "preco": 10.5,
+      "quantidade": 0
+    },
+    {
+      "id": 3,
+      "nome": "Azeite",
+      "preco": 28.50,
+      "quantidade": 0
+    }
+  ]

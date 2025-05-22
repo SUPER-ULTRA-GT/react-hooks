@@ -1,75 +1,51 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import compras from './produtos.json'
+import Item from '../JuliaEIgor/components/item'
 
 const JuliaEIgor = () => {
-// pao
-    const [pao, setPao] = useState(1)
-    const [precoPao, setPrecoPao] = useState(1)
+    // const [produtos, setProdutos] = useState([...compras]);
+    // const [total, setTotal] = useState(0)
 
-    function addPao() {
-        setPao(prevPao => prevPao + 1)
-        setPrecoPao(prevPrecoPao => prevPrecoPao + 1)
+    // useEffect(() => { 
+    //     const geral = produtos.reduce((total, item) => total + item.quantidade * item.preco, 0);
+    //     setTotal(geral);
+    // }, [produtos])
 
-    }
+    // const add = (id) => {
+    //     const lista = [...produtos];
+    //     const index = lista.findIndex(produto => produto.id === id);
+    //     const produtoSelecionado = lista[index];
 
-    function deletePao() {
-            if (pao > 1){
-                setPao(prevPao => prevPao - 1)
-                setPrecoPao(prevPrecoPao => prevPrecoPao - 1)
-            }
+    //     produtoSelecionado.quantidade++;
+    //     setProdutos(lista);
 
-    }
-
-// cafe
-    const [cafe, setCafe] = useState(1)
-    const [precoCafe, setPrecoCafe] = useState(5)
-
-    function addCafe() {
-        setCafe(prevCafe => prevCafe + 1)
-        setPrecoCafe(prevPrecoCafe => prevPrecoCafe + 5)
+    // }
     
+    // const remove = (id) => {
+    //     const lista = [...produtos];
+    //     const index = lista.findIndex(produto => produto.id === id);
+    //     const produtoSelecionado = lista[index];
+
+    //     produtoSelecionado.quantidade > 0 &&
+    //         produtoSelecionado.quantidade--;
+    //     setProdutos(lista)
+
     }
-
-     function deleteCafe() {
-            if (cafe > 1){
-                setCafe(prevCafe => prevCafe - 1)
-                setPrecoCafe(prevPrecoCafe => prevPrecoCafe - 5)
-            }
-
-    }
-
-// total 
-const total = precoPao + precoCafe
 
     return ( 
-        <div className="flex flex-col items-center mt-[20px] bg-[#e9e9e92d] py-9 ">
-            <div className="item bg-violet-200 py-3.5 px-5 w-[50] rounded-2xl">
-                <h2 className="text-[22px] font-semibold">Pão</h2>
-                <section className="flex items-center justify-between" >
-                    <p>R${precoPao.toFixed(2).replace('.', ',')}</p>
+        <div className="flex flex-col items-center mt-[20px] bg-[#e9e9e92d] py-9 gap-3">
+            {produtos.map(item => (
+                <Item
+                    key={item.id}
+                    id={item.id}
+                    {...item}
+                    add={add}
+                    remove={remove}
+                    quantidade={item.quantidade}
+                />
+            ))}
 
-                    <section className="flex gap-2.5">
-                        <button className="border rounded-[10px] text-lg px-2.5" onClick={deletePao}>-</button>
-                        <p>{pao}</p>
-                        <button className="border rounded-[10px] text-lg px-2" onClick={addPao}>+</button>
-                    </section>
-                </section>
-            </div>
-
-            <div className="item bg-violet-200 py-3.5 px-5  w-[50%] rounded-2xl my-3">
-                <h2 className="text-[22px] font-semibold">Café</h2>
-                <section className="flex items-center justify-between">
-                    <p>R${precoCafe.toFixed(2).replace('.', ',')}</p>
-
-                    <section className="flex gap-2.5">
-                        <button className="border rounded-[10px] text-lg px-2.5" onClick={deleteCafe}>-</button>
-                        <p>{cafe}</p>
-                        <button className="border rounded-[10px] text-lg px-2" onClick={addCafe}>+</button>
-                    </section>
-                </section>
-    
-            </div>
-
-            <p className="bg-emerald-200 w-[50%] p-2 text-center">Total: R${total.toFixed(2).replace('.', ',')}</p>
+        <h2 className="bg-emerald-200 w-[50%] p-2 text-center">Total: R${total.toFixed(2).replace('.', ',')}</h2>
         </div>
      )
 }
